@@ -1,0 +1,127 @@
+[
+    {
+        "id": "70f12ba6b6c37b2b",
+        "type": "inject",
+        "z": "cdb7199ac4732173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "13.1",
+        "payloadType": "num",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "604244b01816f274",
+                "4abc15c08fd9eda9"
+            ]
+        ]
+    },
+    {
+        "id": "ec41e87e76c47bfc",
+        "type": "debug",
+        "z": "cdb7199ac4732173",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "604244b01816f274",
+        "type": "lithum-to-percent",
+        "z": "cdb7199ac4732173",
+        "name": "lifepo4 4s",
+        "topic": "tooo",
+        "cellno": 4,
+        "litype": "lifepo4",
+        "x": 260,
+        "y": 240,
+        "wires": [
+            [
+                "ec41e87e76c47bfc"
+            ]
+        ]
+    },
+    {
+        "id": "64099a702aa73888",
+        "type": "inject",
+        "z": "cdb7199ac4732173",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "12.1",
+        "payloadType": "num",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "604244b01816f274",
+                "4abc15c08fd9eda9"
+            ]
+        ]
+    },
+    {
+        "id": "4abc15c08fd9eda9",
+        "type": "lithum-to-percent",
+        "z": "cdb7199ac4732173",
+        "name": "liion 3s",
+        "cellno": "3",
+        "litype": "liion",
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "fc58f1d3f823dd85"
+            ]
+        ]
+    },
+    {
+        "id": "fc58f1d3f823dd85",
+        "type": "debug",
+        "z": "cdb7199ac4732173",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 280,
+        "wires": []
+    }
+]
