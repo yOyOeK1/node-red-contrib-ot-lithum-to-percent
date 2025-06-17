@@ -1,0 +1,87 @@
+<script type="text/javascript">
+    RED.nodes.registerType('lithum-to-percent',{
+        category: 'ot',
+        color: '#ccda65',
+        defaults: {
+            name: {value:""},
+            topic: {value:""},
+            cellno: { value:4, required:true, validate:RED.validators.number() },
+            litype: { value:"lifepe4" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "ico_battery_32_32.png",//"fa-battery-2",
+        label: function() {
+            return this.name||"lithum-to-percent";
+        },
+        oneditprepare: function(){
+            $("#node-input-litype").typedInput({
+                types: [
+                    {
+                        value: "lifepo4",
+                        options: [
+                            {value: "lifepo4", label: "lifepo4"},
+                            {value: "liion", label: "li-ion"}
+                        ]
+                    }
+                ]
+            });
+        }
+    });
+    
+</script>
+
+<script type="text/html" data-template-name="lithum-to-percent">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-topic"><i class="fa fa-tag"></i> Topic</label>
+        <input type="text" id="node-input-topic" placeholder="topic">
+    </div>
+    <div class="form-row">
+        <label for="node-input-cellno"><i class="fa fa-tag"></i> Cell count</label>
+        <input type="text" id="node-input-cellno" placeholder="Cell count">
+    </div>
+    <div class="form-row">
+        <label for="node-input-litype"><i class="fa fa-tag"></i> Lithum type</label>
+        <input type="text" id="node-input-litype" placeholder="Lithum type">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="lithum-to-percent">
+    <p>A simple node that converts voltage of li-ion or lifepo4 battery to estimated percent in capacity.</p>
+
+
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload
+            <span class="property-type">number</span>
+        </dt>
+    </dl>
+
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>topic <span class="property-type">string</span></dt>
+        <dd>pass original if not define in config of the node.</dd>
+    </dl>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">number</span></dt>
+        <dd>calculated value of percent.</dd>
+    </dl>
+    <dl class="message-properties">
+        <dt>cellno <span class="property-type">number</span></dt>
+        <dd>cell count in pack of battery (s).</dd>
+    </dl>
+    <dl class="message-properties">
+        <dt>litype <span class="property-type">string</span></dt>
+        <dd>pass selected in configuration of the node type of lithume chemistry.</dd>
+    </dl>
+    
+
+    <hr>
+If you see that this makes sense [ <a href="https://ko-fi.com/B0B0DFYGS">send me a ☕</a> ] | [Master repository](https://github.com/yOyOeK1/oiyshTerminal) | [About SvOiysh](https://www.youtube.c
+
+
+</script>
