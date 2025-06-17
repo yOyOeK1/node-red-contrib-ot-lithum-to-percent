@@ -1,18 +1,29 @@
 {
-    "name" : "node-red-contrib-ot-lithum-to-percent",
-    "version" : "0.0.2",
-    "license": "MIT",
-    "author": "Bartlomiej Ceglik <yoyoek@wp.pl>",
-    "description": "A way to convert li-ion and lifepo4 battery voltage to estimated percents of storaged energy.",
-    "keywords": [
-        "oiyshTerminal",
-        "node-red",
-        "iot"
-    ],
-    "homepage": "https://github.com/yOyOeK1/",
-    "node-red" : {
-        "nodes": {
-            "lower-case": "index.js"
-        }
+  "name" : "node-red-contrib-ot-lithum-to-percent",
+  "version" : "0.0.2",
+  "license": "MIT",
+  "author": "Bartlomiej Ceglik <yoyoek@wp.pl>",
+  "description": "A way to convert li-ion and lifepo4 battery voltage to estimated percents of storaged energy.",
+  "keywords": [
+    "oiyshTerminal",
+    "node-red",
+    "iot"
+  ],
+  "homepage" : "https://github.com/yOyOeK1/",
+  "node-red" : {
+    "nodes": {
+      "lower-case": "index.js"
     }
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yOyOeK1/node-red-contrib-ot-lithum-to-percent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yOyOeK1/node-red-contrib-ot-lithum-to-percent/issues"
+  }
 }
