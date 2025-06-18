@@ -93,14 +93,17 @@ module.exports = function(RED) {
             //msg.payload*2.5;
             node.send(msg);
        
-             mfill = "green";
-            if( msg.payload <= 10 || msg.payload >= 90 )
-                mfill = "red";
-            node.status({
-                fill: mfill,   
-                shape:"ring",
-                text: msg.payload.toFixed(2)+"%"
-            });
+
+            if( config.showstatus == true ){
+                mfill = "green";
+                if( msg.payload <= 10 || msg.payload >= 90 )
+                    mfill = "red";
+                node.status({
+                    fill: mfill,   
+                    shape:"ring",
+                    text: msg.payload.toFixed(2)+"%"
+                });
+            }
 
         });
     }

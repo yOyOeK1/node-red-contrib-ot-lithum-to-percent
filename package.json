@@ -1,6 +1,6 @@
 {
   "name" : "node-red-contrib-ot-lithum-to-percent",
-  "version" : "0.0.2",
+  "version" : "0.0.3",
   "license": "MIT",
   "author": "Bartlomiej Ceglik <yoyoek@wp.pl>",
   "description": "A way to convert li-ion and lifepo4 battery voltage to estimated percents of storaged energy.",
